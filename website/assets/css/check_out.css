@@ -1,0 +1,151 @@
+/* Tổng quan */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Checkout container */
+.checkout-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.checkout-container h1,
+.checkout-container h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Thông tin sản phẩm */
+.cart-items {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+.checkout-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Tổng tiền */
+#total-amount {
+    text-align: right;
+    font-size: 18px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+/* Thông tin khách hàng */
+.customer-info {
+    margin-top: 20px;
+}
+
+.customer-info label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #343a40;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.customer-info input,
+.customer-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.customer-info textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Nút xác nhận */
+.btn-checkout {
+    display: block;
+    width: 100%;
+    background: #28a745;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-checkout:hover {
+    background: #218838;
+}
+
+.btn-checkout:active {
+    background: #1e7e34;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 15px;
+    }
+
+    .checkout-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #total-amount {
+        text-align: center;
+    }
+}

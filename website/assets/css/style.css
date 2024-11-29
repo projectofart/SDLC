@@ -1,0 +1,295 @@
+/* Header và sản phẩm */
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.nav a {
+    color: #fff;
+    margin: 0 30px;
+    text-decoration: none; /* Không có gạch chân */
+    transition: color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.nav a:hover {
+    color: #4485f2; /* Màu khi di chuột vào */
+    transform: translateY(-2px); /* Di chuyển nhẹ lên trên */
+    pointer-events: auto;
+}
+
+.header-icons nav{
+    display: flex;
+    justify-content: space-around;
+}
+.header-icons nav a{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+/* Form đăng nhập */
+.login-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.logo {
+    height: 50px; 
+    width: 60px; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button[type="submit"] {
+    background-color: #4485f2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* Hiển thị form khi checkbox được chọn */
+#toggle-login-form:checked ~ .login-form-container {
+    display: flex;
+}
+
+/* Thiết lập cho từng slide */
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Container chiếm toàn bộ chiều rộng */
+    height: 450px; /* Đặt chiều cao cụ thể cho container */
+    overflow: hidden; /* Ẩn phần ảnh bị tràn */
+}
+
+.slide {
+    position: absolute; /* Chồng ảnh lên nhau */
+    width: 100%; /* Đặt chiều rộng ảnh bằng container */
+    height: 100%; /* Ảnh chiếm toàn bộ chiều cao container */
+    opacity: 0; /* Ẩn ảnh mặc định */
+    transition: opacity 1s ease-in-out; /* Hiệu ứng mờ dần */
+}
+
+.slide:nth-child(1) {
+    animation: fadeSlide 6s infinite; /* Lặp animation */
+}
+
+.slide:nth-child(2) {
+    animation: fadeSlide 6s infinite 3s; /* Bắt đầu sau 3 giây */
+}
+
+/* Keyframes cho chuyển động */
+@keyframes fadeSlide {
+    0%, 100% {
+        opacity: 0; /* Ẩn ở đầu và cuối */
+    }
+    25%, 75% {
+        opacity: 1; /* Hiển thị trong khoảng thời gian giữa */
+    }
+}
+/* Products section */
+.products {
+    padding: 5px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.products h2 {
+    padding: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    padding: 7px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.product-item del {
+    color: #999;
+    font-size: 14px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Nút "Xem tất cả" */
+.view-all {
+    margin: 50px;
+    text-align: center; /* Căn giữa */
+    margin-top: 20px;
+}
+
+.btn-view-all {
+    margin: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Màu xanh */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-all:hover {
+    background-color: #0056b3; /* Màu đậm hơn khi hover */
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 10px 20px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    margin: 0;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #f0c040;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+/* Tùy chỉnh cho ảnh */
+
